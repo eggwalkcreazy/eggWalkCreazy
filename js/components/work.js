@@ -14,8 +14,8 @@ map.on('load', function() {
     Config.Data.getData({
             url: 'data/EggWalkathon2019.json'
         },
-        function(result) {
-            var data = result.features;
+        function(json) {
+            var data = json.features;
             for (var i = 0; i < data.length; i++) {
                 if (data[i].geometry.type == 'LineString') {
                     walkingroute = data[i];
