@@ -11,31 +11,11 @@ var intersectionlocation = new Array();
 var reminds = new Array();
 var currentpointimg;
 map.on('load', function() {
-    /* Config.Data.getData(
-    	{
-    		url: Config.dataUrl,
-    	},
-    	function(result) {
-    		var roadNodeArray = [];
-    		for (let index = 0; index < result.length; index++) {
-    			const json = result[index];
-    			var lineNodes = [];
-    			json['nodes'].forEach(obj => {
-    				var point = obj['p'].split(',');
-    				lineNodes.push([+point[0], +point[1]]);
-    			});
-    			roadNodeArray.push(lineNodes);
-    		}
-    	},
-    	function(error) {
-    		console.error(error);
-    	}
-    ); */
     Config.Data.getData({
             url: 'data/EggWalkathon2019.json'
         },
         function(result) {
-            var data = json.features;
+            var data = result.features;
             for (var i = 0; i < data.length; i++) {
                 if (data[i].geometry.type == 'LineString') {
                     walkingroute = data[i];
