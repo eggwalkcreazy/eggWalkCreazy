@@ -15,4 +15,7 @@ var Config = {
 	mapCenter: [121.59369235743857, 31.258559059722138],
 	//出示级别
 	defaultLevel: 15,
+	// baidu   http://api.map.baidu.com/panorama/v2
+	panoramaImgUrl: '/panorama/v2',
+	baidu_key: 'iGHG3Qa75hywiYMHDQEYLZAumteG9rhv',
 };
