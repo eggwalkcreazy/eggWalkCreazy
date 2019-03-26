@@ -4,6 +4,7 @@
  * @date 2019-03-21
  */
 var Config = {
+	projectPath: '/eggWalkCreazy',
 	//数据请求地址
 	dataUrl: 'http://c.dituhui.com/maps/1995268/get_lines',
 	//mapbox token

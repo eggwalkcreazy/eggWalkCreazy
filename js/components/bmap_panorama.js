@@ -38,4 +38,14 @@ Config.BMap_Panorama = {
 
 		xhr.send();
 	},
+	/**
+	 * 街景页
+	 * @param {*} pageUrl 跳转页面
+	 * @param {*} param 参数
+	 */
+	GetPanoramaPage: function(pageUrl, param) {
+		if (!pageUrl && !param) return;
+		pageUrl += Config.Util.getParamsString(param);
+		window.open(pageUrl);
+	},
 };

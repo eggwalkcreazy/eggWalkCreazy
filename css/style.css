@@ -1,0 +1,24 @@
+/* 项目样式 */
+
+.button {
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    text-shadow: 0px 1px 0px #2f6627;
+    -webkit-box-shadow: 1px 1px 3px 0px #666666;
+    -moz-box-shadow: 1px 1px 3px 0px #666666;
+    box-shadow: 1px 1px 3px 0px #666666;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 16px;
+    background: #44c767;
+    padding: 12px 30px 12px 30px;
+    border: solid #18ab29 1px;
+    text-decoration: none;
+}
+
+.button:hover {
+    color: #ffffff;
+    background: #5cbf2a;
+    text-decoration: none;
+}

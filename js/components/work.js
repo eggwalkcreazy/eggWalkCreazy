@@ -166,9 +166,20 @@ map.on('load', function() {
 					Config.BMap_Panorama.GetPanoramaImgs(
 						lngLat['lng'] + ',' + lngLat['lat'],
 						function(img) {
-							var content = '<div><h1>' + properties['title'] + '</h1><div id="imgDiv"></div></div>';
+							var content =
+								'<div><h1>' +
+								properties['title'] +
+								'</h1><button id="panoramaBtn" class="button">进入街景</button><div id="imgDiv"></div></div>';
 							var popup = getPopupFuncs(lngLat, content);
 							if (popup) {
+								$('#panoramaBtn')
+									.off()
+									.on('click', function() {
+										openPanoramaPage({
+											lng: lngLat['lng'],
+											lat: lngLat['lat'],
+										});
+									});
 								$('#imgDiv').html(img);
 							}
 						},
@@ -203,6 +214,10 @@ map.on('load', function() {
 	);
 });
 
+function openPanoramaPage(lngLat) {
+	var pageUrl = Config.projectPath + '/bmap.html';
+	Config.BMap_Panorama.GetPanoramaPage(pageUrl, lngLat);
+}
 /**
  * 获取弹框
  * @param {*} lngLat
